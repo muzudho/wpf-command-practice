@@ -12,6 +12,12 @@
         Executed="CommandBinding_Executed"
         CanExecute="CommandBinding_CanExecute"/>
     </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding 
+        Modifiers="Alt+Control" 
+        Key="A"
+        Command="{x:Static local:MainWindow.AlertCommand}" />
+    </Window.InputBindings>
     <Grid>
         <StackPanel>
             <CheckBox x:Name="checkBox" Content="CanExecute"/>
