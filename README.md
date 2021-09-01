@@ -8,6 +8,6 @@
 
 WPFのコマンドの練習  
 
-# Documents
+## Documents
 
 📖　[WPFのBehaviorを使おうぜ（＾～＾）？](https://crieit.net/drafts/612cbd1570107)  
