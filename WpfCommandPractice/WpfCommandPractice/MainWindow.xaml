@@ -6,22 +6,25 @@
         xmlns:local="clr-namespace:WpfCommandPractice"
         mc:Ignorable="d"
         Title="MainWindow" Height="143" Width="410">
+
+    <!-- ここでコマンドを登録してる感じ -->
     <Window.CommandBindings>
         <CommandBinding 
         Command="{x:Static local:MainWindow.AlertCommand}" 
         Executed="CommandBinding_Executed"
         CanExecute="CommandBinding_CanExecute"/>
     </Window.CommandBindings>
+
+    <!-- ここでキー操作とそれに紐づくアクションを登録してる感じ -->
     <Window.InputBindings>
         <KeyBinding 
         Modifiers="Alt+Control" 
         Key="A"
         Command="{x:Static local:MainWindow.AlertCommand}" />
     </Window.InputBindings>
-    <Grid>
-        <StackPanel>
-            <CheckBox x:Name="checkBox" Content="CanExecute"/>
-            <Button Content="AlertCommand" Command="{x:Static local:MainWindow.AlertCommand}" />
-        </StackPanel>
-    </Grid>
+    
+    <StackPanel>
+        <CheckBox x:Name="checkBox" Content="CanExecute"/>
+        <Button Content="AlertCommand" Command="{x:Static local:MainWindow.AlertCommand}" />
+    </StackPanel>
 </Window>
